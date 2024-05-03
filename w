@@ -18,15 +18,6 @@ Icon = <string> - The icon of the tab.
 PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
 ]]
 
-local Section = Tab:AddSection({
-	Name = "Section"
-	Name = "Aim"
-})
-
---[[
-Name = Aim - The name of the section.
-]]
-
 Tab:AddButton({
 	Name = "Button!",
 	Callback = function()
@@ -106,7 +97,7 @@ Tab:AddToggle({
 
 		loop = RunService.RenderStepped:Connect(function()
   		 local UserInputService = game:GetService("UserInputService")
-   		local pressed = --[[UserInputService:IsKeyDown(Enum.KeyCode.E)]] UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton2) --Enum.UserInputType.MouseButton2
+   		local pressed = --[[UserInputService:IsKeyDown(Enum.KeyCode.MouseButton2)]] UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton2) --Enum.UserInputType.MouseButton2
    		local localPlay = game.Players.localPlayer.Character
   		 local cam = workspace.CurrentCamera
   		 local zz = workspace.CurrentCamera.ViewportSize/2
